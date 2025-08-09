@@ -14,6 +14,7 @@ model = ChatGroq(
 # schema
 class Review(BaseModel):
 
+    # In Pydantic, a Field is a way to provide extra information or validation rules for a model attribute (field). 
     key_themes: list[str] = Field(description="A brief on key themes of the review")
     summary: str = Field(description="A brief summary of the review")
     sentiment: Literal["pos","neg"] = Field(description="sentiments of review")
